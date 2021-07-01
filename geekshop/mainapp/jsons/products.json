@@ -1,0 +1,74 @@
+ [
+ {
+      "category": "Дом",
+      "name": "Красный стул",
+      "image": "products_images/product-4_kEYbgxQ.jpg",
+      "short_desc": "Красивый красный стул",
+      "description": "Сделанный из качественных материалов, прекрасно подойдёт людям, которые любят сидеть с комфортом.",
+      "price": "6000.00",
+      "quantity": 17
+  },
+  {
+      "category": "Офис",
+      "name": "Лампа сфера",
+      "image": "products_images/product-1.jpg",
+      "short_desc": "Лампа офисного исполнения.",
+      "description": "Отлично подойдёт для любителей работать в хорошо освещённом кабинете!",
+      "price": "5000.00",
+      "quantity": 22
+  },
+  {
+      "category": "Классика",
+      "name": "Кресло из белой кожи",
+      "image": "products_images/product-21.jpg",
+      "short_desc": "Уникальный дизайн",
+      "description": "Отличное кресло, исполненное в классическом стиле. Для любителей комфортного отдыха.",
+      "price": "20000.00",
+      "quantity": 24
+  },
+  {
+      "category": "Модерн",
+      "name": "Чёрная лампа",
+      "image": "products_images/product-31.jpg",
+      "short_desc": "Лампа в стиле модерн",
+      "description": "Изящное сочетание стиля модерн и яркого света.",
+      "price": "4500.00",
+      "quantity": 20
+  },
+  {
+      "category": "Дом",
+      "name": "Часы",
+      "image": "products_images/product-4-sm_zdOOIvp.jpg",
+      "short_desc": "Часы для дома",
+      "description": "Интуитивный циферблат, и строгий дизайн.",
+      "price": "2000.00",
+      "quantity": 32
+  },
+  {
+      "category": "Офис",
+      "name": "Офисная ваза",
+      "image": "products_images/product-61_WkkDr5w.jpg",
+      "short_desc": "Офисная эргономичная ваза",
+      "description": "Создана из натуральных материалов, отличной подойдёт для дополнения вашего рабочего места.",
+      "price": "1500.00",
+      "quantity": 31
+  },
+  {
+      "category": "Модерн",
+      "name": "Толкушка",
+      "image": "products_images/product-51.jpg",
+      "short_desc": "Кухонный девайс для измельчения",
+      "description": "Отлично подойдёт для кухни в стиле модерн, можно использовать в качестве измельчения различных специй (например Зира)",
+      "price": "1000.00",
+      "quantity": 35
+  },
+  {
+      "category": "Классика",
+      "name": "Чайник",
+      "image": "products_images/product-3.jpg",
+      "short_desc": "Белый чайник",
+      "description": "Надёжный, выполненный из эко-материала чайник, объёмом 1.7 литров, выполненный в классическом стиле.",
+      "price": "2000.00",
+      "quantity": 33
+  }
+]
