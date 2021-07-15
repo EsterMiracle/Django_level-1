@@ -15,14 +15,10 @@ def index(request):
     context = {
         'title': title,
         'products': products,
-        'basket': basket,
+        'basket': basket
     }
     return render(request, 'geekshop/index.html', context=context)
 
 
 def contacts(request):
-    title = 'Контакты'
-    context = {
-        'title': title,
-    }
-    return render(request, 'geekshop/contact.html', context=context)
+    return render(request, 'geekshop/contact.html')

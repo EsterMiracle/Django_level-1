@@ -1,33 +1,33 @@
 {% extends 'geekshop/base.html' %}
 {% load static %}
 
-{% block title %}{{title|title}}{% endblock %}
 {% block css %}
 	<link rel="stylesheet" type="text/css" href="{% static 'mainapp/style.css' %}">
 {% endblock %}
 
 {% block content %}
+
 		<div class="details">
 			{% include 'mainapp/includes/inc_category_menu.html' %}
 
 			<div class="details-products">
 				<div class="details-slider">
 					<div class="slider-product text-center">
-						<img src="/media/{{ hot_product.image }}">
+						<img src="/media/{{hot_product.image}}">
 					</div>
-					<div class="slider-control">
+					<div class="slider-control d-flex ">
 						<div class="block">
-							<a href="#"><img src="/media/{{ hot_product.image }}" alt="" class="w-50">
+							<a href="#"><img src="/media/{{hot_product.image}}" alt="" class="w-50">
 								<div class="text"></div>
 							</a>
 						</div>
 						<div class="block">
-							<a href="#"><img src="/media/{{ hot_product.image }}" alt="" class="w-50">
+							<a href="#"><img src="/media/{{hot_product.image}}" alt="" class="w-50">
 								<div class="text"></div>
 							</a>
 						</div>
 						<div class="block">
-							<a href="#"><img src="/media/{{ hot_product.image }}" alt="" class="w-50">
+							<a href="#"><img src="/media/{{hot_product.image}}" alt="" class="w-50">
 								<div class="text"></div>
 							</a>
 						</div>
@@ -46,11 +46,15 @@
 					</div>
 				</div>
 			</div>
-		<div class="featured">
+		{% if products %}
+		<div class="featured mt-5">
+			{% if category %}
+				<h2>Категория: {{ category.name|title }}</h2>
+			{% endif %}
 			<div class="featured-menu">
-					<a class="active" href="#">Популярные</a><a href="#">Новинки</a>
+				<a class="active" href="#">Популярные</a><a href="#">Новинки</a>
 			</div>
-			<a class="explore" href="#">показать все <img src="/static/geekshop/img/arrow.png" alt=""></a>
+			<a class="explore" href="#">показать все <img src="{% static 'geekshop/img/arrow.png' %}" alt=""></a>
 			<div class="clearfix">
 			</div>
 			<div class="tab-content">
@@ -58,9 +62,9 @@
 					<div class="block">
 						<a href="{% url 'products:product' product.pk %}"><img src="/media/{{product.image}}" alt="">
 							<div class="text">
-								<img src="/static/geekshop/img/icon-hover.png" alt="img">
+								<img src="{% static 'geekshop/img/icon-hover.png' %}" alt="img">
 								<h4>{{product.name}}</h4>
-								<p>{{product.short_desc}}</p>
+								<p>{{product.short_desc}}. </p>
 							</div>
 						</a>
 					</div>
@@ -77,7 +81,7 @@
 					<div class="block">
 						<a href="#"><img src="/media/{{product.image}}" alt="">
 							<div class="text">
-								<img src="/static/geekshop/img/icon-hover.png" alt="img">
+								<img src="img/icon-hover.png" alt="img">
 								<h4>Стул повышенного качества</h4>
 								<p>Не оторваться. </p>
 							</div>
@@ -87,7 +91,7 @@
 					<div class="block">
 						<a href="#"><img src="/media/{{prod.image}}" alt="">
 							<div class="text">
-								<img src="/static/geekshop/img/icon-hover.png" alt="img">
+								<img src="{% static 'geekshop/img/icon-hover.png' %}" alt="img">
 								<h4>{{prod.name}}</h4>
 								<p>{{prod.description}}</p>
 							</div>
@@ -97,4 +101,7 @@
 				</div>
 			</div>
 		</div>
+	{% else %}
+
+	{% endif %}
 {% endblock %}
