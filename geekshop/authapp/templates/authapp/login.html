@@ -5,7 +5,7 @@
     <div class="container">
         <div class="row">
             <div class="mx-auto col-3">
-                <form class="form-horizontal" action="{% url 'auth:login' %}" method="post">
+                <form class="form-horizontal" action="{% url 'auth:login' %}" method="post" >
                     {% csrf_token %}
                     {% if next %}
                         <input type="hidden" name="next" value="{{ next }}">
@@ -18,6 +18,11 @@
         <button class="btn btn-round form-control">
             <a href="{% url 'auth:register' %}" class="">
                 зарегистрироваться
+            </a>
+        </button>
+        <button class="btn btn-round form-control">
+            <a href="{% url 'social:begin' 'vk-oauth2' %}?next=/">
+             Вход через ВКонтакте
             </a>
         </button>
     </div>
