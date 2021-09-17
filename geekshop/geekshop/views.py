@@ -7,10 +7,7 @@ from mainapp.models import Product
 def index(request):
     title = 'магазин'
 
-    products = Product.objects.all()[:3]
-    basket = []
-    if request.user.is_authenticated:
-        basket = Basket.objects.filter(user=request.user)
+    products = Product.objects.filter(is_deleted=False, category__is_deleted=False)[:3]
 
     context = {
         'title': title,
