@@ -16,7 +16,7 @@ def basket(request):
     if request.user.is_authenticated:
         basket = Basket.objects.filter(user=request.user).order_by('product__category')
         context = {
-            'basket': basket,
+            'basket': basket
         }
         return render(request, 'basketapp/basket.html', context)
 
